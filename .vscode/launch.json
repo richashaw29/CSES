@@ -1,0 +1,79 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "spiral",
+      "request": "launch",
+      "mainClass": "spiral",
+      "projectName": "CSES_7cbcb5b5"
+    },
+    {
+      "type": "java",
+      "name": "exponentiation",
+      "request": "launch",
+      "mainClass": "exponentiation",
+      "projectName": "CSES_7cbcb5b5"
+    },
+    {
+      "type": "java",
+      "name": "permutation",
+      "request": "launch",
+      "mainClass": "permutation",
+      "projectName": "CSES_7cbcb5b5"
+    },
+    {
+      "type": "java",
+      "name": "incarray",
+      "request": "launch",
+      "mainClass": "incarray",
+      "projectName": "CSES_7cbcb5b5"
+    },
+    {
+      "type": "java",
+      "name": "repetition",
+      "request": "launch",
+      "mainClass": "repetition",
+      "projectName": "CSES_7cbcb5b5"
+    },
+    {
+      "type": "java",
+      "name": "missing",
+      "request": "launch",
+      "mainClass": "missing",
+      "projectName": "CSES_7cbcb5b5"
+    },
+    {
+      "type": "c",
+      "name": "Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "weirdalgo",
+      "request": "launch",
+      "mainClass": "weirdalgo",
+      "projectName": "CSES_7cbcb5b5"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/shawr/OneDrive/Desktop/CSES",
+      "program": "c:/Users/shawr/OneDrive/Desktop/CSES/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
