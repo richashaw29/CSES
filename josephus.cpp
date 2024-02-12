@@ -10,9 +10,5 @@ int x;
 cin>>x;
 int t;
 cin>>t;
-
-
-
-
     }
 }
