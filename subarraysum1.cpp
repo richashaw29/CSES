@@ -7,27 +7,27 @@ int n;
 cin>>n;
 long long x;
 cin>>x;
+int c=0,l=0,r=0;
+long long sum=0;
 long long  arr[n];
 for(int i=0;i<n;i++)
 {
 cin>>arr[i];
 }
-int f=0;
-int l=0;
-long long  s=0;
-int c=0;
-while(f<n)
+
+while(r<n)
 {
-s=s+arr[l];
-if(x==s)
-c++;
-if(s>x||l==n)
+sum+=arr[r];
+while(sum>x&&l<=r)
 {
-f++;
-l=f-1;
-s=0;
-}
+sum=sum-arr[l];
 l++;
+}
+if(sum==x)
+{
+    c++;
+}
+r++;
 }
 cout<<c<<endl;
 

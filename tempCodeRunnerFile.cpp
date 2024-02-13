@@ -1,20 +1,41 @@
 #include<bits/stdc++.h>
 using namespace std;
-const int m=1e9+7;
-void tower(int s,int d,int h,int n)
-{
-if(n==1)
-{
-cout<<s<<" "<<d<<endl;
-return;
-}tower(s,h,d,n-1);
-cout<<s<<" "<<d;
-tower(h,d,s,n-1);
-}
 int main()
 {
-int n;
+int t;
+cin>>t;
+
+while(t-->0)
+{int n;
 cin>>n;
-tower(1,3,2,n);
+int a[n];
+vector<int>aa;
+vector<int>b;
+
+for(int i=0;i<n;i++)
+{
+cin>>a[i];
+aa.push_back(i+1);
+b.push_back(i+n);
+}
+int i=0;
+int j=0;
+int c=0;
+int l=0;
+while(j<n)
+{
+if(aa[i]<b[j])
+{
+c++;
+i++;
+}
+else{
+l=max(l,c);
+c=0;
+j++;
+i=j;
+}
 
 }
+cout<<l<<endl;
+}}
