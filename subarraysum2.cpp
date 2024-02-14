@@ -7,31 +7,49 @@ int n;
 cin>>n;
 long long x;
 cin>>x;
-int arr[n];
+long long a[n];
+long long m[n];
+long long h=0;
 for(int i=0;i<n;i++)
 {
-cin>>arr[i];
+    cin>>a[i];
+    h+=a[i];
+    m[i]=h;
 }
-int l=0;
+long long sum=0;
+long long rem=0;
 int c=0;
-map<long long,int>m;
-long long psum=0;
-while(l<n)
+for(int i=0;i<n;i++)
 {
-psum+=arr[l];
-if(psum==x)
+sum+=a[i];
+if(sum==x)
 {
-    c++;
-}
-if(psum>x)
-{
-int k=psum-x;
-if(m.find(k)!=m.end())
 c++;
 }
-if(m.find(psum)==m.end())
-m[psum]=l;
-l++;
+rem=sum-x;
+if(rem!=0)
+{
+for(int j=0;j<=i;j++)
+{
+    if(m[j]==rem)
+    {
+        c++;
+    }
 }
+}
+else
+{
+    for(int j=0;j<i;j++)
+{
+    if(m[j]==rem)
+    {
+        c++;
+    }
+}
+    
+}
+}
+
+
 cout<<c<<endl;
 }

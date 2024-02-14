@@ -21,13 +21,13 @@ int s=0;
 int c=0;
 while(f<n&&s<m)
 {
-if(abs(a[f]-b[s])==k)
+if(abs(a[f]-b[s])<=k)
 {
 c++;
 f++;
 s++;
 }
-if(abs(a[f]-b[s])>k)
+else if(a[f]>b[s])
 {
     s++;
 }
