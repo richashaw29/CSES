@@ -7,41 +7,28 @@ int n;
 cin>>n;
 int x;
 cin>>x;
-int a[n];
-unordered_map<int,int> m;
-for(int i=0;i<n;i++){
-cin>>a[i];
-m[a[i]]=i;
-}
-sort(a,a+n);
-int f=0;
-int l=n-1;
-int p=0,q=0;
-int c=-1;
-while(f<l)
+int arr[n];
+map<int,int>m;
+for(int i=0;i<n;i++)
 {
-if(a[f]+a[l]==x)
-{
-    // cout<<"*";
-p=a[f];
-q=a[l];
-c=0;
-break;
+cin>>arr[i];
 }
-else if(a[f]+a[l]>x)
-l--;
-else
-f++;
-}
-if(c!=0){
-cout<<"IMPOSSIBLE";
-return 0;
-}
-auto it=m.find(p);
-int h=it->second;
-m.erase(p);
-auto i=m.find(q);
-int o=i->second;
- cout<<h+1<<" "<<o+1<<endl;
 
+int f=0;
+for(int i=0;i<n;i++)
+{
+int r=x-arr[i];
+if(m.find(r)!=m.end())
+{
+    f=1;
+    cout<<m[r]<<" "<<i+1<<endl;
+    break;
+}
+else
+{
+    m[arr[i]]=i+1;
+}
+}
+if(f==0)
+cout<<"IMPOSSIBLE"<<endl;
 }
